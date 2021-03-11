@@ -1,0 +1,32 @@
+baseURL = "https://nhchiu.github.io/seabunny"
+languageCode = "zh-tw"
+title = "Seabunny"
+theme = "ananke"
+hasCJKLanguage = true
+
+# DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[params]
+  favicon = "/images/favicon.ico"
+  site_logo = ""
+  description = "The last theme you'll ever need. Maybe."
+  facebook = "https://www.facebook.com/%E5%85%94%E8%B1%9A%E5%85%B5%E5%9C%98-1675937385988266"
+  twitter = ""
+  instagram = ""
+  youtube = "https://www.youtube.com/channel/UCFhGsHkyN1mPf2HCc4OlGsw"
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-near-black"
+  featured_image = "/images/cool-background.svg"
+
+  custom_css = []
