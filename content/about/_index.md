@@ -12,6 +12,6 @@ Hi, 人類們，歡迎來到兔豚駐台辦事處，兔豚這種生物對你來�
 
 想連絡我們請透過我們的人類代表，接洽資訊如下：
 
-台北市大安區信義路四段 25 號 5 樓之二<br>
-phone: 0925-926-119<br>
-email: service@seabuny.tech
+台北市大安區信義路四段 25 號 5 樓之二<br>  
+phone: 0925-926-119<br>  
+email: contact@seabuny.tech
