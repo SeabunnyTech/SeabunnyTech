@@ -1,2 +1,6 @@
 <!-- raw html -->
-{{ .Get 0 | safeHTML }}
+{{ if .Get 0 }}
+    {{ .Get 0 | safeHTML }}
+{{ else }}
+    {{ .Inner }}
+{{ end }}
