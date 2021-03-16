@@ -12,7 +12,7 @@ googleAnalytics = ""
 [params]
   favicon = "/images/favicon.ico"
   site_logo = ""
-  description = "The last theme you'll ever need. Maybe."
+  description = ""
   facebook = "https://www.facebook.com/%E5%85%94%E8%B1%9A%E5%85%B5%E5%9C%98-1675937385988266"
   twitter = ""
   instagram = ""
@@ -28,4 +28,4 @@ googleAnalytics = ""
   background_color_class = "bg-near-black"
   featured_image = "/images/cool-background.svg"
 
-  custom_css = []
+  # custom_css = []

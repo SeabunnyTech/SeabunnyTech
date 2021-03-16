@@ -1,9 +1,10 @@
 ---
 title: 關於兔豚兵團
+weight: 100
 menu: {main: {name: About}}
 ---
 
-{{< figure src="seabunny.png" >}}
+{{< figure src="./seabunny.png" >}}
 
 ## 兵團簡介
 
@@ -17,9 +18,6 @@ Bunny Bunny!
 
 想連絡我們請透過我們的人類代表，接洽資訊如下：
 
-{{< rawhtml >}}
-台北市大安區信義路四段25號5樓之二 </br>
-phone: 0925-926-119 </br>
-email:
-{{< /rawhtml >}}
-[contact@seabunny.tech](mailto:contact@seabunny.tech)
+> 台北市大安區信義路四段25號5樓之二 {{< rawhtml `</br>` />}}
+phone: 0925-926-119 {{< rawhtml `</br>` />}}
+email: [contact@seabunny.tech](mailto:contact@seabunny.tech)

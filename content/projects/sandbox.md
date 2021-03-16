@@ -1,11 +1,14 @@
 ---
-title: Sandbox
+title: AR Sandbox
+date: 2016-01-15T00:00:00.000Z
+lastmod: 2020-05-18T00:00:00.000Z
 draft: false
 ---
 
-# 來玩沙吧!
+# **來玩沙吧!**
 
 ### 融合了深度感應與回饋投影技術的地貌投影箱
+
 ### 隨時製造出人意表的即時互動體驗
 
 {{< youtube "JMh-8dndAyI" >}}
@@ -24,31 +27,25 @@ draft: false
 
 {{< rawhtml >}}
 
-<h3>
-<span class="fas fa-2x fa-fw fa-child wow bounceIn text-primary" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></span> 被科技賦予魔力的沙坑
-</h3>
-{{</rawhtml>}}
+<div class="flex">
+<div class="w-third ph2 tc">
+<i class="fas fa-5x fa-fw fa-child grow center wow bounceIn text-primary" ></i>
+<h3>被科技賦予魔力的沙坑</h3>
+<p>實測證明，地貌沙箱擁有將現代小孩從手機螢幕中抽離出來，玩得不亦樂乎的魔力。</p>
+</div>
 
-實測證明，地貌沙箱擁有將現代小孩從手機螢幕中抽離出來，玩得不亦樂乎的魔力。
+<div class="w-third ph2 tc">
+<i class="fas fa-5x fa-fw fa-graduation-cap grow wow bounceIn text-primary" ></i>
+<h3>讓地理不再是紙上談兵</h3>
+<p>想讓地裡教學更貼近現實嗎？</br>
+讓孩子看著衛星地圖親手雕出蘭陽平原和雪山山脈吧！</p>
+</div>
 
-{{< rawhtml >}}
-
-<h3>
-<span class="fas fa-2x fa-fw fa-graduation-cap wow bounceIn text-primary" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></span> 讓地理不再是紙上談兵
-</h3>
-{{</rawhtml>}}
-
-想讓地裡教學更貼近現實嗎？
-
-讓孩子看著衛星地圖親手雕出蘭陽平原和雪山山脈吧！
-
-{{< rawhtml >}}
-
-<h3>
-<span class="fas fa-2x fa-fw fa-chart-line wow bounceIn text-primary" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></span> 高行銷潛力的互動藝術品
-</h3>
-{{</rawhtml>}}
-
-想找個辦法讓群眾自發地拍照打卡，為你經營的組織做形象宣傳嗎？
-
-地貌沙箱絕對能助你一臂之力！
+<div class="w-third ph2 tc">
+<i class="fas fa-5x fa-fw fa-chart-line grow wow bounceIn text-primary" ></i>
+<h3>高行銷潛力的互動藝術品</h3>
+<p>想找個辦法讓群眾自發地拍照打卡，為你經營的組織做形象宣傳嗎？</br>
+地貌沙箱絕對能助你一臂之力！</p>
+</div>
+</div>
+{{< /rawhtml >}}
