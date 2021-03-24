@@ -1,0 +1,11 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<article class="mx-auto text-reset py-5 measure-wide-l">
+    <h1 id="title">
+        {{ .Title }}
+    </h1>
+    <p>
+        {{ .Content }}
+    </p>
+</article>
+{{ end }}

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="p-3 p-md-4 bg-light">
+    {{ with .Content }}
+    <section class="text-reset px-3 px-lg-5 py-3 py-lg-4 fs-4 text-lg-center mx-auto lh-base text-black-50 measure-wide">
+        {{- . -}}
+    </section>
+    {{ end }}
+    <section class="d-flex flex-wrap">
+        <div class="container">
+            <div class="row gx-2 gx-lg-2 justify-content-around">
+                {{ range .Paginator.Pages }}
+                <div class="position-relative col-12 col-lg-4 mb-4">
+                    {{- partial "summary.html" . -}}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    <div aria-label="Page navigation" class="d-inline mx-auto">
+        {{- template "_internal/pagination.html" . -}}
+    </div>
+</article>
+{{ end }}
