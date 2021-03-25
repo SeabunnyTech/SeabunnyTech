@@ -1,6 +1,6 @@
 baseURL = "https://www.seabunny.tech/"
 languageCode = "zh-tw"
-title = "Seabunny"
+title = "SeaBunny"
 theme = ["mytheme"]
 hasCJKLanguage = true
 
@@ -8,6 +8,8 @@ DefaultContentLanguage = "zh-tw"
 SectionPagesMenu = "main"
 Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
+
+Copyright = "SeaBunny Ltd."
 
 [params]
   favicon = "/images/favicon.ico"
