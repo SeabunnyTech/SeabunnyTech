@@ -13,7 +13,7 @@ Copyright = "SeaBunny Ltd."
 
 [params]
   favicon = "/images/favicon.ico"
-  site_logo = ""
+  site_logo = "/images/logo.png"
   description = ""
   facebook = "https://www.facebook.com/%E5%85%94%E8%B1%9A%E5%85%B5%E5%9C%98-1675937385988266"
   twitter = ""
