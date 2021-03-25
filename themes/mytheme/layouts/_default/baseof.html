@@ -55,10 +55,10 @@
     {{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
 </head>
 
-<body class="{{ $.Param "body_classes"  | default "is-preload"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+<body class="{{ $.Param "body_classes"  | default "is-preload"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }} d-flex min-vh-100 flex-column">
 
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main>
+    <main class="flex-grow-1">
         {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
