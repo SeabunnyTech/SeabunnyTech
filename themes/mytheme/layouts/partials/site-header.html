@@ -2,8 +2,8 @@
 {{ if $featured_image }}
 {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
 {{ $featured_image := (trim $featured_image "/") | absURL }}
-<header style="background-size: cover; background-repeat: no-repeat; background-position: top center; background-image: url('{{ $featured_image }}');">
-    <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-50" }}" style="background-color: rgba(0, 0, 0, 0.5);">
+<header class="d-flex flex-column min-vh-100" style="background-size: cover; background-repeat: no-repeat; background-position: top center; background-image: url('{{ $featured_image }}');">
+    <div class="flex-grow-1 {{ .Site.Params.cover_dimming_class | default "bg-black-50" }}" style="background-color: rgba(0, 0, 0, 0.5);">
         {{ partial "site-navigation.html" . }}
         <div class="text-lg-center py-4 py-lg-5 px-3 px-md-4">
             <h1 class="display-1 text-light lh-lg my-2 my-lg-5 fw-bold">
