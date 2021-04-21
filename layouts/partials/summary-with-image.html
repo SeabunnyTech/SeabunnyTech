@@ -1,0 +1,31 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+<div class="position-relative zoom-on-hover">
+    <div class="my-3 position-relative overflow-hidden rounded bg-primary"
+         style="padding-top: 75%;">
+        <div class="position-absolute top-50 start-50 w-100 h-100 translate-middle">
+            {{ if $featured_image }}
+            {{ $featured_image := (trim $featured_image "/") | absURL }}
+            <img src="{{ $featured_image }}" alr="..." class="w-100 h-100"
+                 style="object-fit: cover; object-position: center;">
+            {{ else }}
+            <h1 class="m-3">{{.Title}}</h1>
+            {{ end }}
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    {{ $title := .Title }}
+    {{ with .Params.youtube_id }}
+    <a href="#videoModal" class="text-reset text-decoration-none stretched-link video-link" data-bs-toggle="modal" data-src="{{.}}">
+        <h5>{{ $title }}</h5>
+    </a>
+    {{ else }}
+    <a href="{{ .Permalink }}" class="text-reset text-decoration-none stretched-link">
+        <h5>{{ $title }}</h5>
+    </a>
+    {{ end }}
+    {{ with .Params.location }}
+    <small class="text-muted">
+        {{.}}
+    </small>
+    {{ end }}
+</div>

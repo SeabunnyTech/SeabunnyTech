@@ -1,32 +1,92 @@
-baseURL = "https://www.seabunny.tech/"
-languageCode = "zh-tw"
-title = "SeaBunny"
-theme = ["mytheme"]
-hasCJKLanguage = true
+baseURL                = "https://www.seabunny.tech/"
+copyright              = "SeaBunny Ltd."
+defaultContentLanguage = "zh-tw"
+disableKinds           = ["taxonomy", "term", "RSS"]
+# "page", "home", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"
+enableGitInfo              = true
+footnoteAnchorPrefix       = ""
+footnoteReturnLinkContents = ""
+googleAnalytics            = ""
+hasCJKLanguage             = true
+languageCode               = "zh-tw"
+paginate                   = 3          # this is set low for demonstrating with dummy content. Set to a higher number
+sectionPagesMenu           = "main"
+summaryLength              = 100
+title                      = "SeaBunny"
 
-DefaultContentLanguage = "zh-tw"
-SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
-
-Copyright = "SeaBunny Ltd."
 
 [params]
-  favicon = "/images/favicon.ico"
-  site_logo = "/images/logo.png"
-  description = ""
-  facebook = "https://www.facebook.com/%E5%85%94%E8%B1%9A%E5%85%B5%E5%9C%98-1675937385988266"
-  twitter = ""
-  instagram = ""
-  youtube = "https://www.youtube.com/channel/UCFhGsHkyN1mPf2HCc4OlGsw"
-  github = ""
-  gitlab = ""
-  linkedin = ""
-  mastodon = ""
-  slack = ""
-  stackoverflow = ""
-  rss = ""
-  background_color_class = "bg-dark"
-  featured_image = "/images/cool-background.svg"
+background_color_class = "bg-dark"
+description            = ""
+facebook               = "https://www.facebook.com/%E5%85%94%E8%B1%9A%E5%85%B5%E5%9C%98-1675937385988266"
+favicon                = "/images/favicon.ico"
+featured_image         = "/images/topography.svg"
+github                 = ""
+gitlab                 = ""
+instagram              = ""
+linkedin               = ""
+mastodon               = ""
+rss                    = ""
+site_logo              = "/images/logo.png"
+slack                  = ""
+stackoverflow          = ""
+twitter                = ""
+youtube                = "https://www.youtube.com/channel/UCFhGsHkyN1mPf2HCc4OlGsw"
 
 # custom_css = []
+[module]
+  [[module.mounts]]
+  source = "content"
+  target = "content"
+
+  [[module.mounts]]
+  source = "static"
+  target = "static"
+
+  [[module.mounts]]
+  source = "layouts"
+  target = "layouts"
+
+  [[module.mounts]]
+  source = "data"
+  target = "data"
+
+  [[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+  [[module.mounts]]
+  source = "i18n"
+  target = "i18n"
+
+  [[module.mounts]]
+  source = "archetypes"
+  target = "archetypes"
+
+  [[module.mounts]]
+  source = "./node_modules/bootstrap/scss"
+  target = "./assets/scss/bootstrap"
+
+  [[module.mounts]]
+  source = "./node_modules/bootstrap/dist/js"
+  target = "./assets/js/bootstrap"
+
+  [[module.mounts]]
+  source = "./node_modules/@popperjs/core/dist/umd"
+  target = "./assets/js/popperjs"
+
+  [[module.mounts]]
+  source = "./node_modules/@fortawesome/fontawesome-free/scss"
+  target = "./assets/scss/fontawesome"
+
+  [[module.mounts]]
+  source = "./node_modules/@fortawesome/fontawesome-free/js"
+  target = "./assets/js/fontawesome"
+
+  [[module.mounts]]
+  source = "./node_modules/@fortawesome/fontawesome-free/webfonts"
+  target = "./static/webfonts"
+
+  # [[module.mounts]]
+  # source = "./node_modules/bootstrap-icons/font/fonts"
+  # target = "./static/fonts"

@@ -1,0 +1,92 @@
+{{ $icon_size := "1.5em" }}
+
+{{ with .Param "stackoverflow" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Stack Overflow link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Stack Overflow——Opens in a new window">
+    <i class="fab fa-fw fa-stack-overflow"></i>
+</a>
+{{ end }}
+
+{{ with .Param "facebook" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Facebook link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Facebook——Opens in a new window">
+    <i class="fab fa-fw fa-facebook"></i>
+</a>
+{{ end }}
+
+{{ with .Param "twitter" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Twitter link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Twitter——Opens in a new window">
+    <i class="fab fa-fw fa-twitter"></i>
+</a>
+{{ end }}
+
+{{ with .Param "instagram" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Instagram link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Instagram——Opens in a new window">
+    <i class="fab fa-fw fa-instagram"></i>
+</a>
+{{ end }}
+
+{{ with .Param "youtube" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Youtube link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Youtube——Opens in a new window">
+    <i class="fab fa-fw fa-youtube"></i>
+</a>
+{{ end }}
+
+{{ with .Param "linkedin" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="LinkedIn link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on LinkedIn——Opens in a new window">
+    <i class="fab fa-fw fa-linkedin"></i>
+</a>
+{{ end }}
+
+{{ with .Param "github" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Github link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Github——Opens in a new window">
+    <i class="fab fa-fw fa-github"></i>
+</a>
+{{ end }}
+
+{{ with .Param "gitlab" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Gitlab link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Gitlab——Opens in a new window">
+    <i class="fab fa-fw fa-gitlab"></i>
+</a>
+{{ end }}
+
+{{ with .Param "keybase" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Keybase link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Keybase——Opens in a new window">
+    <i class="fab fa-fw fa-keybase"></i>
+</a>
+{{ end }}
+
+{{ with .Param "medium" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Medium link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Medium——Opens in a new window">
+    <i class="fab fa-fw fa-medium"></i>
+</a>
+{{ end }}
+
+{{ with .Param "mastodon" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Mastodon link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Mastodon——Opens in a new window">
+    <i class="fab fa-fw fa-mastodon"></i>
+</a>
+{{ end }}
+
+{{ with .Param "slack" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="Slack link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="follow on Slack——Opens in a new window">
+    <i class="fab fa-fw fa-slack"></i>
+</a>
+{{ end }}
+
+{{ with .Param "rss" }}
+<a href="{{ . }}" target="_blank" class="btn link-light ms-2 p-0" role="button" title="RSS link" rel="noopener"
+   style="font-size: {{ $icon_size }};" aria-label="RSS——Opens in a new window">
+    <i class="fab fa-fw fa-rss-square"></i>
+</a>
+{{ end }}

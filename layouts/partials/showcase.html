@@ -1,0 +1,44 @@
+{{ $paginator := .Paginator }}
+
+<div class="d-flex">
+    <div>
+        <h1 class="fw-bold">{{ .Title }}</h1>
+        <h5>{{ .Params.subtitle }}</h5>
+    </div>
+    {{ if ne .Pages nil }}
+    {{/* {{ if gt $paginator.TotalPages 1 }} */}}
+    <div class="d-inline ms-auto align-self-end">
+        <a class="{{ if not $paginator.HasPrev }}disabled{{ end }} btn btn-link p-1"
+           {{ if $paginator.HasPrev }} href="{{ $paginator.Prev.URL }}" {{ end }}
+           aria-label="Previous">
+            <i aria-hidden="true" class="fas fa-fw fa-2x fa-arrow-left"></i>
+        </a>
+        <a class="{{ if not $paginator.HasNext }}disabled{{ end }} btn btn-link p-1"
+           {{ if $paginator.HasNext }} href="{{ $paginator.Next.URL }}" {{ end }}
+           aria-label="Next">
+            <i aria-hidden="true" class="fas fa-fw fa-2x fa-arrow-right"></i>
+        </a>
+    </div>
+    {{/* {{ end }} */}}
+    {{ end }}
+</div>
+<div class="row py-3 text-start">
+    {{ if ne .Pages nil }}
+    {{ range $paginator.Pages }}
+    <div class="col-12 col-lg-4">
+        {{- partial "summary-with-image.html" . -}}
+    </div>
+    {{ end }}
+    <!-- Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1"
+         aria-labelledby="youtubeVideo" aria-hidden="true" style="background-color: #f1c198bf;">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/{{.}}?autoplay=1&modestbranding=1&showinfo=0"
+                        title="YouTube video" id="video"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>

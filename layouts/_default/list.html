@@ -1,0 +1,71 @@
+{{ define "main" }}
+<article class="bg-secondary">
+    {{ with .Content }}
+    <section class="text-reset px-3 px-lg-5 py-3 py-lg-4 fs-4 text-lg-center mx-auto lh-base">
+        {{- . -}}
+    </section>
+    {{ end }}
+    <section class="d-flex flex-wrap py-5">
+        <div class="container">
+            <div class="row gx-2 gx-lg-3 justify-content-around">
+                {{ range .Paginator.Pages }}
+                <div class="position-relative col-12 col-lg-4 mb-4">
+                    {{- partial "summary.html" . -}}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    <div aria-label="Page navigation" class="d-inline mx-auto">
+        {{- template "_internal/pagination.html" . -}}
+    </div>
+</article>
+{{/*  <style>
+    div.card h3 {
+        z-index: 10;
+    }
+
+    div.card img {
+        height: 100%;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
+        transition: opacity 0.5s ease;
+    }
+
+    div.card img.hide-on-hover {
+        opacity: 1;
+    }
+
+    div.card:hover img.hide-on-hover {
+        opacity: 0.2;
+    }
+
+    div.card img.show-on-hover {
+        opacity: 0.2;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    div.card:hover img.show-on-hover {
+        opacity: 0.7;
+    }
+
+    div.card div.caption {
+        z-index: 4;
+        background: #0c1a21cc;
+        color: #eeeeee;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    div.card:hover div.caption {
+        transform: translateY(0);
+    }
+</style>  */}}
+{{ end }}

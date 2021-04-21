@@ -1,0 +1,24 @@
+{{ define "header"}}
+<header class="d-flex flex-column bg-dark">
+    <div class="flex-grow-1">
+        {{ partial "site-navigation.html" . }}
+    </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<article class="bg-dark text-light">
+    {{ with .Content }}
+    <section>
+        {{- . -}}
+    </section>
+    {{ end }}
+    {{ range .Pages }}
+    <section>
+        <div class="container-lg py-5">
+            {{- partial "showcase.html" . -}}
+        </div>
+    </section>
+    {{ end }}
+</article>
+{{ end }}

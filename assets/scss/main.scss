@@ -1,0 +1,128 @@
+@import "variables";
+// Google Font
+@import url($web-font-path);
+
+// Bring in Bootstrap
+// Option 1
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+// Import just the styles you need. Note that some stylesheets are required no matter what.
+
+$primary: #ff2828dc;
+$dark: #1b1b1b;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-dark-color: rgba(255, 255, 255, .75);
+$navbar-dark-hover-color: rgba(255, 255, 255, .90);
+$navbar-dark-active-color: #1a1a1aff;
+$nav-pills-link-active-color: #1a1a1aff;
+$nav-pills-link-active-bg: #cdd3e4cf;
+@import "./bootstrap/functions"; // Required
+@import "./bootstrap/variables"; // Required
+@import "./bootstrap/mixins"; // Required
+@import "./bootstrap/utilities";
+
+// Override Bootstrap here
+$utilities: map-merge($utilities,
+    ("background-color": (property: background-color,
+            class: bg,
+            values: map-merge(map-get(map-get($utilities, "background-color"), "values"),
+                ("black-10": rgba($black, .1),
+                    "black-20": rgba($black, .2),
+                    "black-30": rgba($black, .3),
+                    "black-40": rgba($black, .4),
+                    "black-50": rgba($black, .5),
+                    "black-60": rgba($black, .6),
+                    "black-70": rgba($black, .7),
+                    "black-80": rgba($black, .8),
+                    "black-90": rgba($black, .9),
+                    "black": $black,
+                    "white-10": rgba(255, 255, 255, .1),
+                    "white-20": rgba(255, 255, 255, .2),
+                    "white-30": rgba(255, 255, 255, .3),
+                    "white-40": rgba(255, 255, 255, .4),
+                    "white-50": rgba(255, 255, 255, .5),
+                    "white-60": rgba(255, 255, 255, .6),
+                    "white-70": rgba(255, 255, 255, .7),
+                    "white-80": rgba(255, 255, 255, .8),
+                    "white-90": rgba(255, 255, 255, .9),
+                    "white": $white)))));
+
+$utilities: map-merge($utilities,
+    ("max-viewport-height": (property: max-height,
+            class: max-vh,
+            responsive: true,
+            values: (100: 100vh))));
+
+// $utilities: map-merge($utilities,
+//     ("max-width": (property: max-width,
+//             class: mw,
+//             responsive: true,
+//             values: (none: none,
+//                 1:1rem,
+//                 2:2rem,
+//                 3:4rem,
+//                 4:8rem,
+//                 5:16rem,
+//                 6:32rem,
+//                 7:48rem,
+//                 8:64rem,
+//                 9:96rem,
+//             ))));
+
+// Layout & components
+@import "./bootstrap/root";
+@import "./bootstrap/reboot"; // Required
+@import "./bootstrap/type";
+@import "./bootstrap/images";
+@import "./bootstrap/containers";
+@import "./bootstrap/grid";
+@import "./bootstrap/tables";
+@import "./bootstrap/forms";
+@import "./bootstrap/buttons";
+@import "./bootstrap/transitions";
+@import "./bootstrap/dropdown";
+@import "./bootstrap/button-group";
+@import "./bootstrap/nav";
+@import "./bootstrap/navbar"; // Requires nav
+@import "./bootstrap/card";
+@import "./bootstrap/accordion";
+@import "./bootstrap/breadcrumb";
+@import "./bootstrap/pagination";
+@import "./bootstrap/badge";
+@import "./bootstrap/alert";
+@import "./bootstrap/progress";
+@import "./bootstrap/list-group";
+@import "./bootstrap/close";
+@import "./bootstrap/toasts";
+@import "./bootstrap/modal"; // Requires transitions
+@import "./bootstrap/tooltip";
+@import "./bootstrap/popover";
+@import "./bootstrap/carousel";
+@import "./bootstrap/spinners";
+@import "./bootstrap/offcanvas";
+
+// Helpers
+@import "./bootstrap/helpers";
+
+// Utilities
+@import "./bootstrap/utilities/api";
+
+// Font Awesome
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
+@import "./fontawesome/brands.scss";
+
+// @import "./bootstrap-icons/font/bootstrap-icons.css";
+
+// Custom styles
+
+div.zoom-on-hover img {
+    transition: transform 0.3s ease;
+}
+
+div.zoom-on-hover:hover img {
+    transform: scale(1.05, 1.05);
+}

@@ -1,0 +1,101 @@
+{{ define "header" }}
+<header class="d-flex flex-column" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('/images/banner.png');">
+    <div class="flex-grow-1">
+        {{ partial "site-navigation.html" . }}
+        <div class="container text-light" style="min-height: calc(100vh - 64px);">
+            <div style="padding-top: calc(40vh); padding-bottom: 1rem;">
+                <h1 class="lh-base fw-bold">你有一個令人驚豔的好點子嗎?<br>讓我們幫你畫出來、做成真的</h1>
+                <p class="lh-base fw-light">我們整合那些最神奇的科技<br>做成沒人見過的展覽品</p>
+            </div>
+        </div>
+    </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+{{ with .Content }}
+<article>
+    {{ . }}
+</article>
+
+{{ else }}
+<article>
+    <section class="position-relative overflow-hidden">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-lg-7 text-start align-self-center">
+                    <h1 class="my-4 fw-bold">我們的興趣是鑽研新科技</h1>
+                    <p>想試試那些你聽過讀過，卻不曾親眼看過的展覽科技嗎?<br>
+                        我們可以講給你聽、做給你看。</p>
+
+                    <p>我們公司的核心成員跨足電機、資訊、物理等領域，<br>有堅實的數學物理及軟體
+                        知識作為基礎，我們很善於開發新技術來實踐不同客戶的想像。</p>
+
+                    <a role="button" class="btn btn-primary mt-3 link-light" href="./showcases/">看看成果</a>
+                </div>
+                <div class="col-12 col-lg-5 p-5">
+                    <img src="/images/ncdr_blacklines.png" alt="..." class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <img src="/images/code.png" class="position-absolute top-0 start-0 w-100"
+             style="filter: opacity(0.1); min-height: 100%; object-fit: cover; z-index: -1;">
+    </section>
+
+    <section style="background-color: #f0ead1;">
+        <div class="container py-5">
+            <div class="row py-3">
+                <div class="col-12 col-lg-7 text-start align-self-center">
+                    <h1 class="my-4 fw-bold">需要一點靈感嗎?</h1>
+                    <h5>我們在平坦的桌上牆上、立體的模型上、移動的積木上都做過投影。<br>
+                        看看我們做過的案例和實驗，或許能幫助您想像更多可能。</h5>
+                </div>
+                <div class="col-12 col-lg-5 align-self-end text-end">
+                    <a role="button" class="btn btn-primary mt-3 link-light" href="./showcases/">看更多</a>
+                </div>
+            </div>
+            <div class="row py-3 text-start link-dark">
+                {{ $featured := first 3 (where (where site.RegularPages "Section" "showcases" ) "Params.featured" true)}}
+                {{ range $featured }}
+                <div class="col-12 col-lg-4">
+                    {{- partial "summary-with-image.html" . -}}
+                </div>
+                {{ end }}
+                <!-- Modal -->
+                <div class="modal fade" id="videoModal" tabindex="-1"
+                     aria-labelledby="youtubeVideo" aria-hidden="true" style="background-color: #f1c198bf;">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/{{.}}?autoplay=1&modestbranding=1&showinfo=0"
+                                    title="YouTube video" id="video"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section style="background-color: #a1d199;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 text-start px-0">
+                    <img src="/images/sketch.png" class="img-fluid" alt="...">
+                </div>
+                <div class="col-12 col-lg-6 p-5 align-self-center h-100 text-center">
+                    <div class="d-inline-block text-start">
+                        <h1 class="my-4 fw-bold">把你的點子寫下來<br>
+                            讓我們為你畫張草圖吧!</h1>
+                        <p>每次我們聽到客戶提出一個想法時，都會很想把對方的點子畫成圖<br>
+                            並且期待當我們的示意圖寄到客戶手裡時能得到「對對對就是這樣」的回應</p>
+
+                        <p>你有一些想法了嗎？歡迎您在來信和我們討論<br>
+                            我們很習慣在八字還沒一撇的早期與客戶一起發揮想像力，討論各種可能性</p>
+                        <a role="button" class="btn btn-primary mt-3 link-light" href="./collaboration/">瞭解合作流程</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+{{ end }}
+{{ end }}

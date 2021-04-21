@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-transparent" role="navigation">
+    <div class="container-sm">
+        <a class="navbar-brand fs-3 d-inline-block p-0 fw-bold" href="{{ .Site.Home.RelPermalink }}">
+            {{ with .Site.Params.site_logo }}
+            <img src="{{ . }}" style="height: 64px;" alt="{{ $.Site.Title }}" />
+            {{ else }}
+            {{ .Site.Title }}
+            {{ end }}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            {{/* {{ partial "i18nlist.html" . }} */}}
+            {{ if .Site.Menus.main }}
+            <ul class="navbar-nav nav-pills ps-0 ">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <li class="nav-item pe-3 d-inline-block">
+                    <a class="nav-link link-light fs-4{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}"
+                       {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page" {{ end }}
+                       href="{{ .URL }}" title="{{ .Name }}">
+                        {{/* {{ if .Page.IsSection }}
+                        {{ .Name | pluralize }}
+                        {{ else }} */}}
+                        {{ .Name }}
+                        {{/* {{ end }} */}}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+            {{/* {{ else }} */}}
+            {{/* <h1 style="color:yellow" ><i class="fas fa-exclamation-circle"></i> NO MENU</h1>  */}}
+            {{ end }}
+            {{/* {{ partialCached "social-follow.html" . }} */}}
+        </div>
+    </div>
+</nav>

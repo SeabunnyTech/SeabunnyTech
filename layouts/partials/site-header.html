@@ -1,0 +1,36 @@
+{{ $featured_image := .Param "featured_image"}}
+{{ if $featured_image }}
+{{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+{{ $featured_image := (trim $featured_image "/") | absURL }}
+<header class="d-flex flex-column" style="background-size: cover; background-repeat: no-repeat; background-position: top center; background-image: url('{{ $featured_image }}');">
+    <div class="flex-grow-1 {{ .Site.Params.cover_dimming_class | default "bg-black-30" }}">
+        {{ partial "site-navigation.html" . }}
+        <div class="text-lg-center py-4 py-lg-5 px-3 px-md-4">
+            <h1 class="display-1 text-light lh-lg my-2 my-lg-5 fw-bold">
+                {{ .Title | default .Site.Title }}
+            </h1>
+            {{ with .Params.description }}
+            <h2 class="fs-4 fs-lg-2 text-light container-lg mx-auto mt-3 mb-4">
+                {{ . | markdownify }}
+            </h2>
+            {{ end }}
+        </div>
+    </div>
+</header>
+{{ else }}
+<header>
+    <div class="pb-md-3 pb-lg-5 {{ .Site.Params.background_color_class | default "bg-dark" }}">
+        {{ partial "site-navigation.html" . }}
+        <div class="text-lg-center py-3 px-3 px-md-4">
+            <h1 class="fs-1 text-light lh-lg my-2 my-lg-3 fw-bolder">
+                {{ .Title | default .Site.Title }}
+            </h1>
+            {{ with .Params.description }}
+            <h2 class="fs-3 text-light measure-lg-wide mx-auto lh-lg mt-3 mb-4">
+                {{ . }}
+            </h2>
+            {{ end }}
+        </div>
+    </div>
+</header>
+{{ end }}

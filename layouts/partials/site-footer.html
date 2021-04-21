@@ -1,0 +1,49 @@
+<footer class="text-light footer" role="contentinfo" style="background-color: #161619;">
+    <div class="container py-3">
+        <div class="row my-3">
+            <div class="col-12 col-lg-6">
+                <div class="row py-2 gx-4">
+                    <div class="col-6 text-end">
+                        <h3 class="fw-bold">{{ .Site.Title }}</h3>
+                        <div>{{ partial "socials.html" . }}</div>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="mb-3">聯絡資訊</h4>
+                        <p class="lh-lg" style="color: #bec8d5;">
+                            <span class="fas fa-fw fa-phone"></span>&nbsp;
+                            <a href="tel:0925-926-119" class="text-reset" target="_blank">0925-926-119</a>
+                            <br>
+                            <span class="fas fa-fw fa-envelope-open-text"></span>&nbsp;
+                            <a href="mailto:contact@seabunny.tech" class="text-reset" target="_blank">contact@seabunny.tech</a>
+                            <br>
+                            <span class="fas fa-fw fa-map-marked-alt"></span>&nbsp;
+                            <a href="http://maps.google.com/?q=台北市大安區信義路四段25號" target="_blank" class="text-reset">
+                                台北市大安區信義路四段25號5樓之二
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 text-center">
+                {{/* <a href="http://maps.google.com/?q=台北市大安區信義路四段25號" target="_blank">  */}}
+                {{/* <img src="/images/map.png" class="w-75">  */}}
+                <div class="w-100">
+                    <!-- Google map should show here-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0152366087787!2d121.5424553150062!3d25.033556983972577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd309b399f1%3A0x61704b5c6c1401ab!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5L-h576p6Lev5Zub5q61MjXomZ8!5e0!3m2!1szh-TW!2stw!4v1618800567827!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+                </div>
+                {{/* </a>  */}}
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="my-0 text-muted">
+                &copy; {{ now.Format "2006"}} {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ end }} All Rights Reserved
+            </p>
+            <small class="text-muted">Powered by <a href="https://gohugo.io" class="text-reset">Hugo</a>, <a href="https://getbootstrap.com" class="text-reset">Bootstrap</a> and <a href="https://fontawesome.com" class="text-reset">Font Awesome</a></small>
+        </div>
+        <!--<small class="text-muted">Licensed under <a href="https://opensource.org/licenses/mit-license.php" class="text-reset">MIT</a></small>-->
+        <!-- <p class="text-muted">Po</p> -->
+        {{/* <div>{{ partial "social-follow.html" . }}
+    </div> */}}
+    </div>
+</footer>
