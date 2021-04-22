@@ -10,14 +10,14 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse justify-content-end my-2" id="navbarNavAltMarkup">
             {{/* {{ partial "i18nlist.html" . }} */}}
             {{ if .Site.Menus.main }}
             <ul class="navbar-nav nav-pills ps-0 ">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <li class="nav-item pe-3 d-inline-block">
-                    <a class="nav-link link-light fs-6{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}"
+                    <a class="nav-link link-light fs-6{{if or ($currentPage.IsMenuCurrent `main` .) ($currentPage.HasMenuCurrent `main` .) }} active{{ end }} px-3"
                        {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page" {{ end }}
                        href="{{ .URL }}" title="{{ .Name }}">
                         {{/* {{ if .Page.IsSection }}
