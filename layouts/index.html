@@ -1,7 +1,11 @@
 {{ define "header" }}
-<header class="d-flex flex-column" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('/images/banner.png');">
-    <div class="flex-grow-1">
+<header class="d-flex flex-column bg-black-40 overflow-hidden">
+    <div class="flex-grow-1 position-relative">
         {{ partial "site-navigation.html" . }}
+        <video playsinline autoplay muted loop poster="/images/banner.png" id="HomepageVideo"
+               style="position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;">
+            <source src="jumbotron.mp4" type="video/mp4">
+        </video>
         <div class="container text-light" style="min-height: calc(100vh - 64px);">
             <div style="padding-top: calc(40vh); padding-bottom: 1rem;">
                 <h1 class="lh-base fw-bold">你的好點子，我們幫你實現！</h1>
